@@ -1,12 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import Container from './container'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function App() {
+    const [date, setDate] = useState(new Date().toLocaleString('ja-jp'));
+    setInterval( () => {
+        setDate(new Date().toLocaleString('ja-jp'));
+    }, 1000)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+	return (
+      <main className="todo-list-template">
+        <div className="titleAnimation">
+            TO DO
+            <p className="currentTime">{date}</p>
+        </div>
+		<Container />
+      </main>
+	)
+}
+
+const rootElement = document.getElementById('root')
+ReactDOM.render(<App />, rootElement)
