@@ -54,9 +54,9 @@ const Container = () => {
   }
 
   const handleKeyPress = (e) => {
-    if(e.key == 'Enter') {
-      this.handleCreate();
-    }
+    if(( e.key && e.key == 'Enter') || (e.keyCode && e.keyCode == 13)) {
+      handleCreate();
+    } 
   }
 
   const handleChange = (e) => {
