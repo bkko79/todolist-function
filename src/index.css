@@ -155,8 +155,12 @@ background-position: 0% 50%
   border-top: 1px solid #f1f3f5;
 }
 
+.dragLogo {
+  width: 1rem;
+}
+
 .remove {
-  margin-right: 1rem;
+  margin: 0rem 1rem;
   color: #e64980;
   font-weight: 600;
   opacity: 0;

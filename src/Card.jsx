@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { useDrag, useDrop } from 'react-dnd'
 import ItemTypes from './ItemTypes'
 import Picker from './datepick';
+import logo from './img/up-and-down.png' 
 
 const Card = ({ id, text, checked, timer, message, index, moveCard, onRemove, onToggle, onChangeTime, onDeleteTime }) => {
   const ref = useRef(null)
@@ -48,7 +49,10 @@ const Card = ({ id, text, checked, timer, message, index, moveCard, onRemove, on
   drag(drop(ref))
   return (
     <div className="todo-wrap" style={{ opacity, backgroundColor }}>
-    <div className="todo-item" ref={ref} >
+    <div className="todo-item" >
+      <div className="dragPointer" ref={ref} style={{opacity}}>
+          <img className="dragLogo" src={logo} alt={"logo"}/>
+      </div>
       <div className="remove" onClick={(e) => {
         e.stopPropagation();
         onRemove(id);
