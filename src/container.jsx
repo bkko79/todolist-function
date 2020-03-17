@@ -54,7 +54,7 @@ const Container = () => {
   }
 
   const handleKeyPress = (e) => {
-    if(( e.key && e.key == 'Enter') || (e.keyCode && e.keyCode == 13)) {
+    if(( e.key && e.key === 'Enter') || (e.keyCode && e.keyCode === 13)) {
       handleCreate();
     } 
   }
@@ -77,6 +77,7 @@ const Container = () => {
         })
       )
       setIdx( idx + 1 )
+      setInput("")
     }
   }
 
