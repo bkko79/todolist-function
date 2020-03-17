@@ -49,27 +49,27 @@ const Card = ({ id, text, checked, timer, message, index, moveCard, onRemove, on
   drag(drop(ref))
   return (
     <div className="todo-wrap" style={{ opacity, backgroundColor }}>
-    <div className="todo-item" >
-      <div className="dragPointer" ref={ref} style={{opacity}}>
-          <img className="dragLogo" src={logo} alt={"logo"}/>
-      </div>
-      <div className="remove" onClick={(e) => {
-        e.stopPropagation();
-        onRemove(id);
-      }}>
-        &times;
-      </div>
-      <div className={`todo-text ${checked && 'checked'}`}
-        onClick={() => onToggle(id)}>
-        {text}
-      </div>
-        {
-            !checked && (<Picker id={id} onChangeTime={(id, date) => onChangeTime(id, date)} />)
-        }
-        {
-            checked && (<div className="check-mark">✓</div>)
-        }
+      <div className="todo-item" >  
+        <div className="dragPointer" ref={ref} style={{opacity}}>
+            <img className="dragLogo" src={logo} alt={"logo"}/>
         </div>
+        <div className="remove" onClick={(e) => {
+          e.stopPropagation();
+          onRemove(id);
+        }}>
+          &times;
+        </div>
+        <div className={`todo-text ${checked && 'checked'}`}
+          onClick={() => onToggle(id)}>
+          {text}
+        </div>
+          {
+              !checked && (<Picker id={id} onChangeTime={(id, date) => onChangeTime(id, date)} />)
+          }
+          {
+              checked && (<div className="check-mark">✓</div>)
+          }
+      </div>
         {
             timer && !checked && (
                 <div className="accept-time">
