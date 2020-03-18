@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useDrag, useDrop } from 'react-dnd'
 import ItemTypes from './ItemTypes'
-import Picker from './datepick';
+import Picker from './Datepick';
 import logo from './img/up-and-down.png' 
 
 const Card = ({ id, text, checked, timer, message, index, moveCard, onRemove, onToggle, onChangeTime, onDeleteTime }) => {

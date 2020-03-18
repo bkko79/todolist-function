@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Container from './container'
+import Container from './Container'
 
 function App() {
     const [date, setDate] = useState(new Date().toLocaleString('ja-jp'));

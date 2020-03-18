@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import Card from './Card'
-import Form from './form'
+import Form from './Form'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import { DndProvider } from 'react-dnd'
 import TouchBackend from 'react-dnd-touch-backend'
